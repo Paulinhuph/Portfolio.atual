@@ -52,18 +52,18 @@ a {
 }
 
 canvas,
-.background-grid,
-.background-orb,
-.background-noise {
+.fundo-grade,
+.fundo-orb,
+.fundo-ruido {
   pointer-events: none;
 }
 
-.site-shell {
+.estrutura-site {
   position: relative;
   isolation: isolate;
 }
 
-.loading-screen {
+.tela-carregamento {
   position: fixed;
   inset: 0;
   z-index: 20;
@@ -75,12 +75,12 @@ canvas,
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-.loading-screen.is-hidden {
+.tela-carregamento.is-hidden {
   opacity: 0;
   visibility: hidden;
 }
 
-.loading-panel {
+.painel-carregamento {
   width: min(420px, calc(100vw - 48px));
   padding: 32px;
   border: 1px solid var(--border-bright);
@@ -89,8 +89,8 @@ canvas,
   box-shadow: var(--glow), var(--shadow);
 }
 
-.loading-label,
-.loading-status {
+.rotulo-carregamento,
+.status-carregamento {
   margin: 0;
   color: var(--muted);
   letter-spacing: 0.08em;
@@ -98,7 +98,7 @@ canvas,
   font-size: 0.8rem;
 }
 
-.loading-bar {
+.barra-carregamento {
   position: relative;
   height: 10px;
   margin: 20px 0 14px;
@@ -107,29 +107,29 @@ canvas,
   overflow: hidden;
 }
 
-.loading-fill {
+.preenchimento-carregamento {
   display: block;
   height: 100%;
   width: 0;
   border-radius: inherit;
   background: linear-gradient(90deg, rgba(97, 218, 251, 0.25), var(--cyan-strong));
-  animation: loading 2.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation: carregamento 2.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
-@keyframes loading {
+@keyframes carregamento {
   from { width: 0; }
   to { width: 100%; }
 }
 
 #particles,
-.background-grid,
-.background-orb,
-.background-noise {
+.fundo-grade,
+.fundo-orb,
+.fundo-ruido {
   position: fixed;
   inset: 0;
 }
 
-.background-grid {
+.fundo-grade {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
@@ -138,28 +138,28 @@ canvas,
   opacity: 0.3;
 }
 
-.background-orb {
+.fundo-orb {
   filter: blur(120px);
   opacity: 0.25;
 }
 
-.orb-left {
+.orb-esquerda {
   background: rgba(97, 218, 251, 0.2);
   transform: translate(-20%, -15%);
 }
 
-.orb-right {
+.orb-direita {
   background: rgba(255, 255, 255, 0.08);
   transform: translate(65%, 55%);
 }
 
-.background-noise {
+.fundo-ruido {
   opacity: 0.08;
   background-image: radial-gradient(rgba(255, 255, 255, 0.55) 0.4px, transparent 0.8px);
   background-size: 18px 18px;
 }
 
-.topbar {
+.barra-superior {
   position: sticky;
   top: 0;
   z-index: 10;
@@ -172,7 +172,7 @@ canvas,
   backdrop-filter: blur(18px);
 }
 
-.brand {
+.marca {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -180,7 +180,7 @@ canvas,
   letter-spacing: 0.06em;
 }
 
-.brand-mark {
+.marca-simbolo {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -188,11 +188,11 @@ canvas,
   box-shadow: 0 0 18px rgba(97, 218, 251, 0.7);
 }
 
-.brand-text span {
+.marca-texto span {
   color: var(--muted);
 }
 
-.nav {
+.navegacao {
   display: flex;
   gap: 24px;
   align-items: center;
@@ -202,14 +202,14 @@ canvas,
   background: rgba(9, 11, 15, 0.6);
 }
 
-.nav a {
+.navegacao a {
   position: relative;
   color: var(--muted);
   font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
-.nav a::after {
+.navegacao a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -222,24 +222,24 @@ canvas,
   transition: transform 0.3s ease;
 }
 
-.nav a:hover,
-.nav a.is-active {
+.navegacao a:hover,
+.navegacao a.is-active {
   color: var(--text);
 }
 
-.nav a:hover::after,
-.nav a.is-active::after {
+.navegacao a:hover::after,
+.navegacao a.is-active::after {
   transform: scaleX(1);
 }
 
-.menu-toggle {
+.alternador-menu {
   display: none;
   border: 0;
   background: transparent;
   padding: 0;
 }
 
-.menu-toggle span {
+.alternador-menu span {
   display: block;
   width: 28px;
   height: 2px;
@@ -248,20 +248,20 @@ canvas,
   background: var(--text);
 }
 
-.section {
+.secao {
   width: var(--container);
   margin: 0 auto;
   padding: 72px 0;
   position: relative;
 }
 
-.footer {
+.rodape {
   width: var(--container);
   margin: 0 auto;
   padding: 0 0 36px;
 }
 
-.footer p {
+.rodape p {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
@@ -277,11 +277,11 @@ canvas,
   padding-top: 48px;
 }
 
-.eyebrow,
-.section-kicker,
+.sobrancelha,
+.kicker-secao,
 .tag,
-.project-status,
-.contact-label,
+.status-projeto,
+.rotulo-contato,
 .meta {
   color: var(--muted);
   text-transform: uppercase;
@@ -290,7 +290,7 @@ canvas,
 }
 
 .hero h1,
-.section-heading h2 {
+.cabecalho-secao h2 {
   margin: 0;
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
@@ -302,7 +302,7 @@ canvas,
   max-width: 8ch;
 }
 
-.hero-subtitle {
+.subtitulo-hero {
   max-width: 620px;
   margin: 18px 0 0;
   font-size: clamp(1.15rem, 2vw, 1.55rem);
@@ -310,38 +310,38 @@ canvas,
   line-height: 1.45;
 }
 
-.hero-description,
-.about-card p,
-.timeline-item p,
-.skill-card p,
-.certificate-card p,
-.formation-card p,
-.project-card p {
+.descricao-hero,
+.cartao-sobre p,
+.item-linha-tempo p,
+.cartao-habilidade p,
+.cartao-certificado p,
+.cartao-formacao p,
+.cartao-projeto p {
   color: var(--muted);
   line-height: 1.75;
 }
 
-.certificate-extra {
+.extra-certificado {
   margin: 12px 0 0;
   color: var(--silver);
   font-size: 0.94rem;
   line-height: 1.6;
 }
 
-.hero-description {
+.descricao-hero {
   max-width: 620px;
   margin-top: 18px;
 }
 
-.hero-actions,
-.project-actions {
+.acoes-hero,
+.acoes-projeto {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 32px;
 }
 
-.button {
+.botao {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -358,33 +358,33 @@ canvas,
     box-shadow 0.3s ease;
 }
 
-.button:hover {
+.botao:hover {
   transform: translateY(-2px);
 }
 
-.button-primary {
+.botao-primario {
   background: linear-gradient(135deg, rgba(16, 195, 255, 0.18), rgba(97, 218, 251, 0.1));
   border-color: rgba(97, 218, 251, 0.35);
   box-shadow: var(--glow);
 }
 
-.button-secondary {
+.botao-secundario {
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-.button-ghost {
+.botao-fantasma {
   background: transparent;
   border-color: rgba(97, 218, 251, 0.2);
 }
 
-.button:hover,
-.inline-link:hover,
-.contact-item:hover {
+.botao:hover,
+.link-inline:hover,
+.item-contato:hover {
   box-shadow: 0 0 0 1px rgba(97, 218, 251, 0.18), 0 12px 40px rgba(16, 195, 255, 0.12);
 }
 
-.hero-metrics {
+.metricas-hero {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
@@ -393,20 +393,20 @@ canvas,
   list-style: none;
 }
 
-.hero-metrics li,
-.glass-card {
+.metricas-hero li,
+.cartao-vidro {
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(16, 20, 28, 0.75), rgba(9, 11, 16, 0.78));
   backdrop-filter: blur(22px);
   box-shadow: var(--shadow);
 }
 
-.hero-metrics li {
+.metricas-hero li {
   padding: 18px;
   border-radius: var(--radius-sm);
 }
 
-.hero-metrics strong {
+.metricas-hero strong {
   display: block;
   margin-bottom: 8px;
   color: var(--cyan);
@@ -414,30 +414,30 @@ canvas,
   font-size: 1.05rem;
 }
 
-.hero-metrics span {
+.metricas-hero span {
   color: var(--muted);
   line-height: 1.6;
   font-size: 0.92rem;
 }
 
-.hero-visual {
+.visual-hero {
   display: grid;
   gap: 20px;
 }
 
-.portrait-frame,
-.status-card,
-.about-card,
-.timeline-card,
-.skill-card,
-.formation-card,
-.certificate-card,
-.project-card,
-.contact-panel {
+.moldura-retrato,
+.cartao-status,
+.cartao-sobre,
+.cartao-linha-tempo,
+.cartao-habilidade,
+.cartao-formacao,
+.cartao-certificado,
+.cartao-projeto,
+.painel-contato {
   border-radius: var(--radius);
 }
 
-.portrait-frame {
+.moldura-retrato {
   position: relative;
   min-height: 540px;
   padding: 24px;
@@ -449,7 +449,7 @@ canvas,
   box-shadow: var(--shadow), var(--glow);
 }
 
-.portrait-image {
+.imagem-retrato {
   position: absolute;
   inset: 24px;
   width: calc(100% - 48px);
@@ -460,7 +460,7 @@ canvas,
   filter: saturate(0.92) contrast(1.02) brightness(0.88);
 }
 
-.portrait-placeholder {
+.placeholder-retrato {
   display: grid;
   place-items: center;
   height: 100%;
@@ -476,23 +476,23 @@ canvas,
   text-align: center;
 }
 
-.portrait-frame.has-image .portrait-placeholder {
+.moldura-retrato.has-image .placeholder-retrato {
   opacity: 0;
 }
 
-.portrait-placeholder span {
+.placeholder-retrato span {
   display: block;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 0.08em;
   color: var(--silver);
 }
 
-.portrait-placeholder small {
+.placeholder-retrato small {
   margin-top: 10px;
   color: var(--muted);
 }
 
-.portrait-overlay {
+.sobreposicao-retrato {
   position: absolute;
   inset: 24px;
   border-radius: calc(var(--radius) - 6px);
@@ -501,7 +501,7 @@ canvas,
     radial-gradient(circle at top right, rgba(97, 218, 251, 0.16), transparent 28%);
 }
 
-.portrait-badge {
+.selo-retrato {
   position: absolute;
   top: 18px;
   left: 18px;
@@ -516,7 +516,7 @@ canvas,
   backdrop-filter: blur(10px);
 }
 
-.portrait-corner {
+.canto-retrato {
   position: absolute;
   width: 74px;
   height: 74px;
@@ -524,21 +524,21 @@ canvas,
   filter: drop-shadow(0 0 12px rgba(97, 218, 251, 0.18));
 }
 
-.portrait-corner-top {
+.canto-retrato-topo {
   top: 16px;
   right: 16px;
   border-top: 1px solid;
   border-right: 1px solid;
 }
 
-.portrait-corner-bottom {
+.canto-retrato-base {
   left: 16px;
   bottom: 16px;
   border-left: 1px solid;
   border-bottom: 1px solid;
 }
 
-.scan-line {
+.linha-scan {
   position: absolute;
   left: 12px;
   right: 12px;
@@ -552,51 +552,51 @@ canvas,
   to { top: 110%; }
 }
 
-.status-card,
-.about-card,
-.timeline-card,
-.skill-card,
-.formation-card,
-.certificate-card,
-.project-card,
-.contact-panel {
+.cartao-status,
+.cartao-sobre,
+.cartao-linha-tempo,
+.cartao-habilidade,
+.cartao-formacao,
+.cartao-certificado,
+.cartao-projeto,
+.painel-contato {
   padding: 24px;
 }
 
-.status-card p {
+.cartao-status p {
   margin: 0 0 10px;
   color: var(--muted);
 }
 
-.status-card strong {
+.cartao-status strong {
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
-.section-heading {
+.cabecalho-secao {
   max-width: 760px;
   margin-bottom: 28px;
 }
 
-.section-heading h2 {
+.cabecalho-secao h2 {
   margin-top: 12px;
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.05;
 }
 
-.about-layout,
-.certificates-layout {
+.layout-sobre,
+.layout-certificados {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 22px;
 }
 
-.timeline-card {
+.cartao-linha-tempo {
   position: relative;
   overflow: hidden;
 }
 
-.timeline-line {
+.linha-linha-tempo {
   position: absolute;
   left: 31px;
   top: 28px;
@@ -605,18 +605,18 @@ canvas,
   background: linear-gradient(180deg, rgba(97, 218, 251, 0.45), rgba(255, 255, 255, 0.06));
 }
 
-.timeline-item {
+.item-linha-tempo {
   position: relative;
   display: flex;
   gap: 16px;
   margin-bottom: 22px;
 }
 
-.timeline-item:last-child {
+.item-linha-tempo:last-child {
   margin-bottom: 0;
 }
 
-.timeline-dot {
+.ponto-linha-tempo {
   position: relative;
   z-index: 1;
   flex: 0 0 14px;
@@ -628,16 +628,16 @@ canvas,
   box-shadow: 0 0 16px rgba(97, 218, 251, 0.6);
 }
 
-.card-grid {
+.grade-cartoes {
   display: grid;
   gap: 20px;
 }
 
-.skills-grid {
+.grade-habilidades {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.icon-chip {
+.chip-icone {
   display: inline-grid;
   place-items: center;
   width: 52px;
@@ -650,24 +650,24 @@ canvas,
   font-size: 0.95rem;
 }
 
-.skill-card h3,
-.certificate-card h3,
-.formation-card h3,
-.project-card h3 {
+.cartao-habilidade h3,
+.cartao-certificado h3,
+.cartao-formacao h3,
+.cartao-projeto h3 {
   margin: 18px 0 12px;
   font-size: 1.2rem;
 }
 
-.certificates-grid,
-.project-grid {
+.grade-certificados,
+.grade-projetos {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.certificates-grid {
+.grade-certificados {
   grid-template-columns: 1fr;
 }
 
-.inline-link {
+.link-inline {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -676,26 +676,26 @@ canvas,
   transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.inline-link::after {
+.link-inline::after {
   content: "";
   width: 18px;
   height: 1px;
   background: currentColor;
 }
 
-.disabled-link {
+.link-desabilitado {
   pointer-events: none;
   opacity: 0.55;
 }
 
-.project-topline {
+.linha-superior-projeto {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
 }
 
-.project-stack {
+.pilha-projeto {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -704,7 +704,7 @@ canvas,
   list-style: none;
 }
 
-.project-stack li {
+.pilha-projeto li {
   padding: 8px 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
@@ -713,13 +713,13 @@ canvas,
   background: rgba(255, 255, 255, 0.03);
 }
 
-.contact-panel {
+.painel-contato {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
-.contact-item {
+.item-contato {
   padding: 18px;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -727,12 +727,12 @@ canvas,
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.contact-item:hover {
+.item-contato:hover {
   transform: translateY(-4px);
   border-color: rgba(97, 218, 251, 0.25);
 }
 
-.contact-item strong {
+.item-contato strong {
   display: block;
   margin-top: 12px;
   font-size: 1rem;
@@ -751,20 +751,20 @@ canvas,
   transform: translateY(0);
 }
 
-.glass-card,
-.hero-metrics li,
-.button,
-.contact-item,
-.nav,
-.portrait-frame {
+.cartao-vidro,
+.metricas-hero li,
+.botao,
+.item-contato,
+.navegacao,
+.moldura-retrato {
   position: relative;
   overflow: hidden;
 }
 
-.glass-card::before,
-.hero-metrics li::before,
-.contact-item::before,
-.portrait-frame::before {
+.cartao-vidro::before,
+.metricas-hero li::before,
+.item-contato::before,
+.moldura-retrato::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -781,11 +781,11 @@ canvas,
 
 @media (max-width: 1080px) {
   .hero,
-  .about-layout,
-  .certificates-layout,
-  .skills-grid,
-  .project-grid,
-  .contact-panel {
+  .layout-sobre,
+  .layout-certificados,
+  .grade-habilidades,
+  .grade-projetos,
+  .painel-contato {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -795,17 +795,17 @@ canvas,
 }
 
 @media (max-width: 820px) {
-  .topbar {
+  .barra-superior {
     padding: 18px 0;
   }
 
-  .menu-toggle {
+  .alternador-menu {
     display: block;
     position: relative;
     z-index: 11;
   }
 
-  .nav {
+  .navegacao {
     position: fixed;
     top: 78px;
     left: 24px;
@@ -821,24 +821,24 @@ canvas,
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   }
 
-  .nav.is-open {
+  .navegacao.is-open {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
 
   .hero,
-  .about-layout,
-  .certificates-layout,
-  .skills-grid,
-  .certificates-grid,
-  .project-grid,
-  .contact-panel,
-  .hero-metrics {
+  .layout-sobre,
+  .layout-certificados,
+  .grade-habilidades,
+  .grade-certificados,
+  .grade-projetos,
+  .painel-contato,
+  .metricas-hero {
     grid-template-columns: 1fr;
   }
 
-  .portrait-frame {
+  .moldura-retrato {
     min-height: 420px;
   }
 }
@@ -848,7 +848,7 @@ canvas,
     --container: min(100vw - 28px, 1180px);
   }
 
-  .section {
+  .secao {
     padding: 56px 0;
   }
 
@@ -860,16 +860,16 @@ canvas,
     font-size: clamp(3rem, 18vw, 4.8rem);
   }
 
-  .button,
-  .contact-item,
-  .status-card,
-  .about-card,
-  .timeline-card,
-  .skill-card,
-  .formation-card,
-  .certificate-card,
-  .project-card,
-  .contact-panel {
+  .botao,
+  .item-contato,
+  .cartao-status,
+  .cartao-sobre,
+  .cartao-linha-tempo,
+  .cartao-habilidade,
+  .cartao-formacao,
+  .cartao-certificado,
+  .cartao-projeto,
+  .painel-contato {
     border-radius: 20px;
   }
 }
