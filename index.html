@@ -17,30 +17,30 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="loading-screen" aria-hidden="true">
-    <div class="loading-panel">
-      <p class="loading-label">Inicializando sistema</p>
-      <div class="loading-bar">
-        <span class="loading-fill"></span>
+  <div class="tela-carregamento" aria-hidden="true">
+    <div class="painel-carregamento">
+      <p class="rotulo-carregamento">Inicializando sistema</p>
+      <div class="barra-carregamento">
+        <span class="preenchimento-carregamento"></span>
       </div>
-      <p class="loading-status">Carregando interface de portfólio</p>
+      <p class="status-carregamento">Carregando interface de portfólio</p>
     </div>
   </div>
 
-  <div class="site-shell">
-    <div class="background-grid"></div>
-    <div class="background-orb orb-left"></div>
-    <div class="background-orb orb-right"></div>
-    <div class="background-noise"></div>
+  <div class="estrutura-site">
+    <div class="fundo-grade"></div>
+    <div class="fundo-orb orb-esquerda"></div>
+    <div class="fundo-orb orb-direita"></div>
+    <div class="fundo-ruido"></div>
     <canvas id="particles" aria-hidden="true"></canvas>
 
-    <header class="topbar">
-      <a class="brand" href="#inicio">
-        <span class="brand-mark"></span>
-        <span class="brand-text">PH<span>/SYS</span></span>
+    <header class="barra-superior">
+      <a class="marca" href="#inicio">
+        <span class="marca-simbolo"></span>
+        <span class="marca-texto">PH<span>/SYS</span></span>
       </a>
 
-      <nav class="nav" aria-label="Navegação principal">
+      <nav class="navegacao" aria-label="Navegação principal">
         <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#habilidades">Habilidades</a>
@@ -49,32 +49,32 @@
         <a href="#contato">Contato</a>
       </nav>
 
-      <button class="menu-toggle" type="button" aria-label="Abrir navegação" aria-expanded="false">
+      <button class="alternador-menu" type="button" aria-label="Abrir navegação" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
     </header>
 
     <main>
-      <section class="hero section" id="inicio">
-        <div class="hero-copy" data-reveal>
-          <p class="eyebrow">Portfólio pessoal • Tecnologia • Futuro</p>
+      <section class="hero secao" id="inicio">
+        <div class="copia-hero" data-reveal>
+          <p class="sobrancelha">Portfólio pessoal • Tecnologia • Futuro</p>
           <h1>Paulo Henrique</h1>
-          <p class="hero-subtitle">
+          <p class="subtitulo-hero">
             Estudante de Análise e Desenvolvimento de Sistemas explorando tecnologia,
             automação e inteligência artificial.
           </p>
-          <p class="hero-description">
+          <p class="descricao-hero">
             Interface concebida para apresentar trajetória, competências e projetos com a
             estética de um sistema avançado: limpa, precisa e orientada à inovação.
           </p>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projetos">Ver projetos</a>
-            <a class="button button-secondary" href="#contato">Entrar em contato</a>
+          <div class="acoes-hero">
+            <a class="botao botao-primario" href="#projetos">Ver projetos</a>
+            <a class="botao botao-secundario" href="#contato">Entrar em contato</a>
           </div>
 
-          <ul class="hero-metrics" aria-label="Indicadores profissionais">
+          <ul class="metricas-hero" aria-label="Indicadores profissionais">
             <li>
               <strong>ADS</strong>
               <span>Formação em andamento</span>
@@ -90,40 +90,40 @@
           </ul>
         </div>
 
-        <div class="hero-visual" data-reveal>
-          <div class="portrait-frame">
+        <div class="visual-hero" data-reveal>
+          <div class="moldura-retrato">
             <img
-              class="portrait-image"
+              class="imagem-retrato"
               src="assets/paulo-henrique.jpg"
               alt="Foto de Paulo Henrique"
             >
-            <div class="portrait-placeholder">
+            <div class="placeholder-retrato">
               <span>Imagem pronta para uso</span>
               <small>Conecto sua foto assim que eu tiver o arquivo local</small>
             </div>
-            <div class="portrait-overlay">
-              <span class="portrait-badge">Perfil ativo</span>
-              <span class="portrait-corner portrait-corner-top"></span>
-              <span class="portrait-corner portrait-corner-bottom"></span>
+            <div class="sobreposicao-retrato">
+              <span class="selo-retrato">Perfil ativo</span>
+              <span class="canto-retrato canto-retrato-topo"></span>
+              <span class="canto-retrato canto-retrato-base"></span>
             </div>
-            <div class="scan-line"></div>
+            <div class="linha-scan"></div>
           </div>
 
-          <div class="status-card glass-card">
+          <div class="cartao-status cartao-vidro">
             <p>Status atual</p>
             <strong>Construindo base sólida em software, automação e IA</strong>
           </div>
         </div>
       </section>
 
-      <section class="section about" id="sobre">
-        <div class="section-heading" data-reveal>
-          <p class="section-kicker">Sobre mim</p>
+      <section class="secao sobre" id="sobre">
+        <div class="cabecalho-secao" data-reveal>
+          <p class="kicker-secao">Sobre mim</p>
           <h2>Perfil com foco em evolução técnica e aplicações reais</h2>
         </div>
 
-        <div class="about-layout">
-          <article class="glass-card about-card" data-reveal>
+        <div class="layout-sobre">
+          <article class="cartao-vidro cartao-sobre" data-reveal>
             <p>
               Paulo Henrique é estudante de Análise e Desenvolvimento de Sistemas, dedicado ao
               estudo de programação, inteligência artificial e desenvolvimento de soluções digitais.
@@ -141,24 +141,24 @@
             </p>
           </article>
 
-          <aside class="timeline-card glass-card" data-reveal>
-            <div class="timeline-line"></div>
-            <div class="timeline-item">
-              <span class="timeline-dot"></span>
+          <aside class="cartao-linha-tempo cartao-vidro" data-reveal>
+            <div class="linha-linha-tempo"></div>
+            <div class="item-linha-tempo">
+              <span class="ponto-linha-tempo"></span>
               <div>
                 <strong>Base técnica</strong>
                 <p>Formação em ADS com foco em lógica, programação e construção de soluções digitais.</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <span class="timeline-dot"></span>
+            <div class="item-linha-tempo">
+              <span class="ponto-linha-tempo"></span>
               <div>
                 <strong>Especialidades em evolução</strong>
                 <p>Python, automação, engenharia de prompts, SQL e fundamentos de desenvolvimento web.</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <span class="timeline-dot"></span>
+            <div class="item-linha-tempo">
+              <span class="ponto-linha-tempo"></span>
               <div>
                 <strong>Direção profissional</strong>
                 <p>Integrar software, dados e inteligência artificial em projetos úteis, claros e eficientes.</p>
@@ -168,67 +168,67 @@
         </div>
       </section>
 
-      <section class="section skills" id="habilidades">
-        <div class="section-heading" data-reveal>
-          <p class="section-kicker">Habilidades e tecnologias</p>
+      <section class="secao habilidades" id="habilidades">
+        <div class="cabecalho-secao" data-reveal>
+          <p class="kicker-secao">Habilidades e tecnologias</p>
           <h2>Capacidades organizadas como módulos de um ecossistema técnico</h2>
         </div>
 
-        <div class="card-grid skills-grid">
-          <article class="skill-card glass-card" data-reveal>
-            <div class="icon-chip">PY</div>
+        <div class="grade-cartoes grade-habilidades">
+          <article class="cartao-habilidade cartao-vidro" data-reveal>
+            <div class="chip-icone">PY</div>
             <h3>Python</h3>
             <p>Base principal para desenvolvimento de scripts, automações e aplicações com foco em eficiência.</p>
           </article>
-          <article class="skill-card glass-card" data-reveal>
-            <div class="icon-chip">AU</div>
+          <article class="cartao-habilidade cartao-vidro" data-reveal>
+            <div class="chip-icone">AU</div>
             <h3>Automação</h3>
             <p>Interesse em criar fluxos que reduzam tarefas manuais e ampliem produtividade com software.</p>
           </article>
-          <article class="skill-card glass-card" data-reveal>
-            <div class="icon-chip">AI</div>
+          <article class="cartao-habilidade cartao-vidro" data-reveal>
+            <div class="chip-icone">AI</div>
             <h3>Inteligência artificial</h3>
             <p>Exploração de modelos e aplicações inteligentes voltadas à solução prática de problemas.</p>
           </article>
-          <article class="skill-card glass-card" data-reveal>
-            <div class="icon-chip">PR</div>
+          <article class="cartao-habilidade cartao-vidro" data-reveal>
+            <div class="chip-icone">PR</div>
             <h3>Engenharia de prompts</h3>
             <p>Estruturação de interações claras e eficientes para extrair melhores respostas de sistemas inteligentes.</p>
           </article>
-          <article class="skill-card glass-card" data-reveal>
-            <div class="icon-chip">SQL</div>
+          <article class="cartao-habilidade cartao-vidro" data-reveal>
+            <div class="chip-icone">SQL</div>
             <h3>SQL e banco de dados</h3>
             <p>Experiência com estruturação de dados, consultas e organização de informações para aplicações digitais.</p>
           </article>
-          <article class="skill-card glass-card" data-reveal>
-            <div class="icon-chip">WEB</div>
+          <article class="cartao-habilidade cartao-vidro" data-reveal>
+            <div class="chip-icone">WEB</div>
             <h3>HTML e CSS</h3>
             <p>Desenvolvimento de interfaces web com atenção à estrutura visual, responsividade e apresentação.</p>
           </article>
         </div>
       </section>
 
-      <section class="section certificates" id="certificados">
-        <div class="section-heading" data-reveal>
-          <p class="section-kicker">Certificados e formação</p>
+      <section class="secao certificados" id="certificados">
+        <div class="cabecalho-secao" data-reveal>
+          <p class="kicker-secao">Certificados e formação</p>
           <h2>Estrutura preparada para destacar trajetória acadêmica e validações técnicas</h2>
         </div>
 
-        <div class="certificates-layout">
-          <article class="glass-card formation-card" data-reveal>
+        <div class="layout-certificados">
+          <article class="cartao-vidro cartao-formacao" data-reveal>
             <span class="tag">Formação</span>
             <h3>Análise e Desenvolvimento de Sistemas</h3>
             <p>
               Formação superior voltada para desenvolvimento, modelagem de soluções, lógica,
               arquitetura de software e integração entre tecnologia e negócios.
             </p>
-            <a class="inline-link" href="https://www.linkedin.com/in/paulo-henrique-0642742b7" target="_blank" rel="noreferrer">
+            <a class="link-inline" href="https://www.linkedin.com/in/paulo-henrique-0642742b7" target="_blank" rel="noreferrer">
               Referência de perfil no LinkedIn
             </a>
           </article>
 
-          <div class="card-grid certificates-grid">
-            <article class="certificate-card glass-card" data-reveal>
+          <div class="grade-cartoes grade-certificados">
+            <article class="cartao-certificado cartao-vidro" data-reveal>
               <span class="tag">Certificado</span>
               <h3>Python aplicado a inteligência artificial</h3>
               <p class="meta">Alura • Emitida em mar de 2026</p>
@@ -236,16 +236,16 @@
                 Certificação voltada à aplicação de Python em contextos de inteligência artificial,
                 com foco em fundamentos práticos e exploração de soluções inteligentes.
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Código da credencial: 47b9bec4-ab0d-4695-b014-49d01f15a05f
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Competências: Python e Inteligência artificial
               </p>
-              <a class="inline-link" href="https://cursos.alura.com.br/certificate/47b9bec4-ab0d-4695-b014-49d01f15a05f?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
+              <a class="link-inline" href="https://cursos.alura.com.br/certificate/47b9bec4-ab0d-4695-b014-49d01f15a05f?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
             </article>
 
-            <article class="certificate-card glass-card" data-reveal>
+            <article class="cartao-certificado cartao-vidro" data-reveal>
               <span class="tag">Certificado</span>
               <h3>Pensamento computacional: fundamentos da computação</h3>
               <p class="meta">Alura • Emitida em mar de 2026</p>
@@ -253,13 +253,13 @@
                 Formação introdutória voltada à base lógica da computação, com ênfase em
                 raciocínio estruturado e fundamentos de programação.
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Competências: Programação lógica, Pensamento Computacional e fundamentos de computação
               </p>
-              <a class="inline-link" href="https://cursos.alura.com.br/certificate/ccc40845-9a4f-4f5b-97b6-f367f90a2e6e?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
+              <a class="link-inline" href="https://cursos.alura.com.br/certificate/ccc40845-9a4f-4f5b-97b6-f367f90a2e6e?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
             </article>
 
-            <article class="certificate-card glass-card" data-reveal>
+            <article class="cartao-certificado cartao-vidro" data-reveal>
               <span class="tag">Certificado</span>
               <h3>Engenharia de Prompt: criando prompts eficazes para IA Generativa</h3>
               <p class="meta">Alura • Emitida em mar de 2026</p>
@@ -267,13 +267,13 @@
                 Certificação focada na criação de prompts mais precisos, úteis e estratégicos
                 para interação com sistemas de inteligência artificial generativa.
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Competências: Inteligência artificial
               </p>
-              <a class="inline-link" href="https://cursos.alura.com.br/certificate/260be3cb-bb7b-42d0-aa43-282c51193cc9?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
+              <a class="link-inline" href="https://cursos.alura.com.br/certificate/260be3cb-bb7b-42d0-aa43-282c51193cc9?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
             </article>
 
-            <article class="certificate-card glass-card" data-reveal>
+            <article class="cartao-certificado cartao-vidro" data-reveal>
               <span class="tag">Certificado</span>
               <h3>UX Design: entenda a área da User Experience</h3>
               <p class="meta">Alura • Emitida em mar de 2026</p>
@@ -281,13 +281,13 @@
                 Formação voltada à compreensão da experiência do usuário, estrutura de jornada
                 e princípios de usabilidade aplicados a produtos digitais.
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Competências: Experiência do usuário (UX)
               </p>
-              <a class="inline-link" href="https://cursos.alura.com.br/certificate/918ef849-132e-4109-a4cb-4fe676a7e6c8?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
+              <a class="link-inline" href="https://cursos.alura.com.br/certificate/918ef849-132e-4109-a4cb-4fe676a7e6c8?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
             </article>
 
-            <article class="certificate-card glass-card" data-reveal>
+            <article class="cartao-certificado cartao-vidro" data-reveal>
               <span class="tag">Formação</span>
               <h3>A partir do zero: HTML e CSS para projetos web</h3>
               <p class="meta">Alura • Emitida em jan de 2026</p>
@@ -295,16 +295,16 @@
                 Formação focada na criação de páginas web com estrutura semântica, estilos
                 modernos e organização visual para projetos front-end.
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Código da credencial: 950c678b-9c70-445e-8ccb-c57a29d6978f
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Competências: HTML5 e CSS
               </p>
-              <a class="inline-link" href="https://cursos.alura.com.br/degree/certificate/950c678b-9c70-445e-8ccb-c57a29d6978f?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
+              <a class="link-inline" href="https://cursos.alura.com.br/degree/certificate/950c678b-9c70-445e-8ccb-c57a29d6978f?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
             </article>
 
-            <article class="certificate-card glass-card" data-reveal>
+            <article class="cartao-certificado cartao-vidro" data-reveal>
               <span class="tag">Formação</span>
               <h3>Praticando Python</h3>
               <p class="meta">Alura • Emitida em dez de 2025</p>
@@ -312,16 +312,16 @@
                 Formação direcionada à prática com Python, reforçando lógica de programação,
                 construção de scripts e aplicação em pequenos projetos.
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Código da credencial: a0a6119f-11a4-4c43-9ae6-f467e8eb930a
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Competências: Python
               </p>
-              <a class="inline-link" href="https://cursos.alura.com.br/degree/certificate/a0a6119f-11a4-4c43-9ae6-f467e8eb930a?lang" target="_blank" rel="noreferrer">Validar credencial</a>
+              <a class="link-inline" href="https://cursos.alura.com.br/degree/certificate/a0a6119f-11a4-4c43-9ae6-f467e8eb930a?lang" target="_blank" rel="noreferrer">Validar credencial</a>
             </article>
 
-            <article class="certificate-card glass-card" data-reveal>
+            <article class="cartao-certificado cartao-vidro" data-reveal>
               <span class="tag">Certificado</span>
               <h3>Python: Crie a sua Primeira Aplicação</h3>
               <p class="meta">Alura • Emitida em dez de 2025</p>
@@ -329,177 +329,177 @@
                 Certificação introdutória orientada à criação da primeira aplicação em Python,
                 com foco em prática, lógica e familiaridade com o ecossistema de desenvolvimento.
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Código da credencial: 57e105da-6aea-43d8-a2ed-3bf242c1b2ba
               </p>
-              <p class="certificate-extra">
+              <p class="extra-certificado">
                 Competências: Python, GitHub e fundamentos de desenvolvimento
               </p>
-              <a class="inline-link" href="https://cursos.alura.com.br/certificate/57e105da-6aea-43d8-a2ed-3bf242c1b2ba?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
+              <a class="link-inline" href="https://cursos.alura.com.br/certificate/57e105da-6aea-43d8-a2ed-3bf242c1b2ba?lang=pt_BR" target="_blank" rel="noreferrer">Validar credencial</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section projects" id="projetos">
-        <div class="section-heading" data-reveal>
-          <p class="section-kicker">Projetos</p>
+      <section class="secao projetos" id="projetos">
+        <div class="cabecalho-secao" data-reveal>
+          <p class="kicker-secao">Projetos</p>
           <h2>Ambiente preparado para mostrar soluções com linguagem visual consistente</h2>
         </div>
 
-        <div class="card-grid project-grid">
-          <article class="project-card glass-card" data-reveal>
-            <div class="project-topline">
+        <div class="grade-cartoes grade-projetos">
+          <article class="cartao-projeto cartao-vidro" data-reveal>
+            <div class="linha-superior-projeto">
               <span class="tag">Projeto 01</span>
-              <span class="project-status">Disponível</span>
+              <span class="status-projeto">Disponível</span>
             </div>
             <h3>Desafios Python</h3>
             <p>
               Repositório dedicado à resolução de desafios para treino de lógica de programação
               e sintaxe com Python, reforçando prática, raciocínio e organização de código.
             </p>
-            <ul class="project-stack">
+            <ul class="pilha-projeto">
               <li>Python</li>
               <li>Lógica</li>
               <li>Exercícios práticos</li>
             </ul>
-            <div class="project-actions">
-              <a class="button button-secondary" href="https://github.com/Paulinhuph/Desafios_Python" target="_blank" rel="noreferrer">Abrir repositório</a>
-              <a class="button button-ghost" href="https://github.com/Paulinhuph/Desafios_Python" target="_blank" rel="noreferrer">Ver no GitHub</a>
+            <div class="acoes-projeto">
+              <a class="botao botao-secundario" href="https://github.com/Paulinhuph/Desafios_Python" target="_blank" rel="noreferrer">Abrir repositório</a>
+              <a class="botao botao-fantasma" href="https://github.com/Paulinhuph/Desafios_Python" target="_blank" rel="noreferrer">Ver no GitHub</a>
             </div>
           </article>
 
-          <article class="project-card glass-card" data-reveal>
-            <div class="project-topline">
+          <article class="cartao-projeto cartao-vidro" data-reveal>
+            <div class="linha-superior-projeto">
               <span class="tag">Projeto 02</span>
-              <span class="project-status">Disponível</span>
+              <span class="status-projeto">Disponível</span>
             </div>
             <h3>SherlockHolmes.html</h3>
             <p>
               Site temático desenvolvido para praticar HTML e CSS, inspirado nas obras de
               Arthur Conan Doyle e na identidade visual do universo Sherlock Holmes.
             </p>
-            <ul class="project-stack">
+            <ul class="pilha-projeto">
               <li>HTML</li>
               <li>CSS</li>
               <li>Interface temática</li>
             </ul>
-            <div class="project-actions">
-              <a class="button button-secondary" href="https://github.com/Paulinhuph/SherlockHolmes.html" target="_blank" rel="noreferrer">Abrir repositório</a>
-              <a class="button button-ghost" href="https://github.com/Paulinhuph/SherlockHolmes.html" target="_blank" rel="noreferrer">Ver no GitHub</a>
+            <div class="acoes-projeto">
+              <a class="botao botao-secundario" href="https://github.com/Paulinhuph/SherlockHolmes.html" target="_blank" rel="noreferrer">Abrir repositório</a>
+              <a class="botao botao-fantasma" href="https://github.com/Paulinhuph/SherlockHolmes.html" target="_blank" rel="noreferrer">Ver no GitHub</a>
             </div>
           </article>
 
-          <article class="project-card glass-card" data-reveal>
-            <div class="project-topline">
+          <article class="cartao-projeto cartao-vidro" data-reveal>
+            <div class="linha-superior-projeto">
               <span class="tag">Projeto 03</span>
-              <span class="project-status">Disponível</span>
+              <span class="status-projeto">Disponível</span>
             </div>
             <h3>Monitoramento Obstétrico em Python</h3>
             <p>
               Sistema de terminal em Python que simula o monitoramento mensal e anual de um
               centro obstétrico, com foco em lógica, organização de código e tratamento de dados.
             </p>
-            <ul class="project-stack">
+            <ul class="pilha-projeto">
               <li>Python</li>
               <li>Lógica de programação</li>
               <li>Relatórios no terminal</li>
             </ul>
-            <div class="project-actions">
-              <a class="button button-secondary" href="https://github.com/Paulinhuph/Plataforma_de_Monitoramento_Obstetrico.py" target="_blank" rel="noreferrer">Abrir repositório</a>
-              <a class="button button-ghost" href="https://github.com/Paulinhuph/Plataforma_de_Monitoramento_Obstetrico.py" target="_blank" rel="noreferrer">Ver no GitHub</a>
+            <div class="acoes-projeto">
+              <a class="botao botao-secundario" href="https://github.com/Paulinhuph/Plataforma_de_Monitoramento_Obstetrico.py" target="_blank" rel="noreferrer">Abrir repositório</a>
+              <a class="botao botao-fantasma" href="https://github.com/Paulinhuph/Plataforma_de_Monitoramento_Obstetrico.py" target="_blank" rel="noreferrer">Ver no GitHub</a>
             </div>
           </article>
 
-          <article class="project-card glass-card" data-reveal>
-            <div class="project-topline">
+          <article class="cartao-projeto cartao-vidro" data-reveal>
+            <div class="linha-superior-projeto">
               <span class="tag">Projeto 04</span>
-              <span class="project-status">Disponível</span>
+              <span class="status-projeto">Disponível</span>
             </div>
             <h3>Centro Obstétrico JJMS SQL</h3>
             <p>
               Scripts SQL do projeto de banco de dados do Centro Obstétrico JJMS, cobrindo
               modelagem, DDL, DML e consultas para estruturação e análise de informações.
             </p>
-            <ul class="project-stack">
+            <ul class="pilha-projeto">
               <li>SQL</li>
               <li>Banco de dados</li>
               <li>Modelagem relacional</li>
             </ul>
-            <div class="project-actions">
-              <a class="button button-secondary" href="https://github.com/Paulinhuph/co-partos-sql" target="_blank" rel="noreferrer">Abrir repositório</a>
-              <a class="button button-ghost" href="https://github.com/Paulinhuph/co-partos-sql" target="_blank" rel="noreferrer">Ver no GitHub</a>
+            <div class="acoes-projeto">
+              <a class="botao botao-secundario" href="https://github.com/Paulinhuph/co-partos-sql" target="_blank" rel="noreferrer">Abrir repositório</a>
+              <a class="botao botao-fantasma" href="https://github.com/Paulinhuph/co-partos-sql" target="_blank" rel="noreferrer">Ver no GitHub</a>
             </div>
           </article>
 
-          <article class="project-card glass-card" data-reveal>
-            <div class="project-topline">
+          <article class="cartao-projeto cartao-vidro" data-reveal>
+            <div class="linha-superior-projeto">
               <span class="tag">Projeto 05</span>
-              <span class="project-status">Disponível</span>
+              <span class="status-projeto">Disponível</span>
             </div>
             <h3>ProductiveClock.py</h3>
             <p>
               Aplicativo simples de terminal para gerenciamento de tarefas, desenvolvido em Python
               para praticar funções, listas, dicionários, loops e tratamento de erros.
             </p>
-            <ul class="project-stack">
+            <ul class="pilha-projeto">
               <li>Python</li>
               <li>Terminal</li>
               <li>Organização de tarefas</li>
             </ul>
-            <div class="project-actions">
-              <a class="button button-secondary" href="https://github.com/Paulinhuph/ProductiveClock.py" target="_blank" rel="noreferrer">Abrir repositório</a>
-              <a class="button button-ghost" href="https://github.com/Paulinhuph/ProductiveClock.py" target="_blank" rel="noreferrer">Ver no GitHub</a>
+            <div class="acoes-projeto">
+              <a class="botao botao-secundario" href="https://github.com/Paulinhuph/ProductiveClock.py" target="_blank" rel="noreferrer">Abrir repositório</a>
+              <a class="botao botao-fantasma" href="https://github.com/Paulinhuph/ProductiveClock.py" target="_blank" rel="noreferrer">Ver no GitHub</a>
             </div>
           </article>
 
-          <article class="project-card glass-card" data-reveal>
-            <div class="project-topline">
+          <article class="cartao-projeto cartao-vidro" data-reveal>
+            <div class="linha-superior-projeto">
               <span class="tag">Projeto 06</span>
-              <span class="project-status">Disponível</span>
+              <span class="status-projeto">Disponível</span>
             </div>
             <h3>Sabor Express</h3>
             <p>
               Sistema de controle de restaurantes desenvolvido em Python no terminal, com base
               no curso da Alura, reforçando lógica de programação e organização funcional.
             </p>
-            <ul class="project-stack">
+            <ul class="pilha-projeto">
               <li>Python</li>
               <li>Terminal</li>
               <li>Gerenciamento de restaurantes</li>
             </ul>
-            <div class="project-actions">
-              <a class="button button-secondary" href="https://github.com/Paulinhuph/sabor-express?tab=readme-ov-file#l%C3%B3gica-de-programa%C3%A7%C3%A3o-em-python-do-curso-alura-no-projeto-sabor-express" target="_blank" rel="noreferrer">Abrir repositório</a>
-              <a class="button button-ghost" href="https://github.com/Paulinhuph/sabor-express?tab=readme-ov-file#l%C3%B3gica-de-programa%C3%A7%C3%A3o-em-python-do-curso-alura-no-projeto-sabor-express" target="_blank" rel="noreferrer">Ver no GitHub</a>
+            <div class="acoes-projeto">
+              <a class="botao botao-secundario" href="https://github.com/Paulinhuph/sabor-express?tab=readme-ov-file#l%C3%B3gica-de-programa%C3%A7%C3%A3o-em-python-do-curso-alura-no-projeto-sabor-express" target="_blank" rel="noreferrer">Abrir repositório</a>
+              <a class="botao botao-fantasma" href="https://github.com/Paulinhuph/sabor-express?tab=readme-ov-file#l%C3%B3gica-de-programa%C3%A7%C3%A3o-em-python-do-curso-alura-no-projeto-sabor-express" target="_blank" rel="noreferrer">Ver no GitHub</a>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section contact" id="contato">
-        <div class="section-heading" data-reveal>
-          <p class="section-kicker">Contato</p>
+      <section class="secao contato" id="contato">
+        <div class="cabecalho-secao" data-reveal>
+          <p class="kicker-secao">Contato</p>
           <h2>Canais para networking, oportunidades e futuras colaborações</h2>
         </div>
 
-        <div class="contact-panel glass-card" data-reveal>
-          <a class="contact-item" href="https://www.linkedin.com/in/paulo-henrique-0642742b7" target="_blank" rel="noreferrer">
-            <span class="contact-label">LinkedIn</span>
+        <div class="painel-contato cartao-vidro" data-reveal>
+          <a class="item-contato" href="https://www.linkedin.com/in/paulo-henrique-0642742b7" target="_blank" rel="noreferrer">
+            <span class="rotulo-contato">LinkedIn</span>
             <strong>paulo-henrique-0642742b7</strong>
           </a>
-          <a class="contact-item" href="https://github.com/Paulinhuph" target="_blank" rel="noreferrer">
-            <span class="contact-label">GitHub</span>
+          <a class="item-contato" href="https://github.com/Paulinhuph" target="_blank" rel="noreferrer">
+            <span class="rotulo-contato">GitHub</span>
             <strong>github.com/Paulinhuph</strong>
           </a>
-          <a class="contact-item" href="mailto:henriqyepaulo@gmail.com">
-            <span class="contact-label">Email</span>
+          <a class="item-contato" href="mailto:henriqyepaulo@gmail.com">
+            <span class="rotulo-contato">Email</span>
             <strong>henriqyepaulo@gmail.com</strong>
           </a>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="rodape">
       <p>© 2026 • Paulo Henrique</p>
     </footer>
   </div>
