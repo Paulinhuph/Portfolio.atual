@@ -1,43 +1,43 @@
-const loadingScreen = document.querySelector(".loading-screen");
-const nav = document.querySelector(".nav");
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = Array.from(document.querySelectorAll(".nav a"));
-const revealElements = document.querySelectorAll("[data-reveal]");
-const sections = document.querySelectorAll("main .section");
-const portraitFrame = document.querySelector(".portrait-frame");
-const portraitImage = document.querySelector(".portrait-image");
+const telaCarregamento = document.querySelector(".tela-carregamento");
+const navegacao = document.querySelector(".navegacao");
+const alternadorMenu = document.querySelector(".alternador-menu");
+const linksNavegacao = Array.from(document.querySelectorAll(".navegacao a"));
+const elementosReveal = document.querySelectorAll("[data-reveal]");
+const secoes = document.querySelectorAll("main .secao");
+const molduraRetrato = document.querySelector(".moldura-retrato");
+const imagemRetrato = document.querySelector(".imagem-retrato");
 const canvas = document.getElementById("particles");
-const ctx = canvas ? canvas.getContext("2d") : null;
+const contexto = canvas ? canvas.getContext("2d") : null;
 
 document.body.classList.add("is-locked");
 
 window.addEventListener("load", () => {
   window.setTimeout(() => {
-    loadingScreen.classList.add("is-hidden");
+    telaCarregamento.classList.add("is-hidden");
     document.body.classList.remove("is-locked");
   }, 1800);
 });
 
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+if (alternadorMenu) {
+  alternadorMenu.addEventListener("click", () => {
+    const estaAberto = navegacao.classList.toggle("is-open");
+    alternadorMenu.setAttribute("aria-expanded", String(estaAberto));
   });
 
-  navLinks.forEach((link) => {
+  linksNavegacao.forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
+      navegacao.classList.remove("is-open");
+      alternadorMenu.setAttribute("aria-expanded", "false");
     });
   });
 }
 
-const revealObserver = new IntersectionObserver(
+const observadorReveal = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
+        observadorReveal.unobserve(entry.target);
       }
     });
   },
@@ -46,11 +46,11 @@ const revealObserver = new IntersectionObserver(
   }
 );
 
-revealElements.forEach((element) => {
-  revealObserver.observe(element);
+elementosReveal.forEach((elemento) => {
+  observadorReveal.observe(elemento);
 });
 
-const sectionObserver = new IntersectionObserver(
+const observadorSecao = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
@@ -58,9 +58,9 @@ const sectionObserver = new IntersectionObserver(
       }
 
       const id = entry.target.getAttribute("id");
-      navLinks.forEach((link) => {
-        const isActive = link.getAttribute("href") === `#${id}`;
-        link.classList.toggle("is-active", isActive);
+      linksNavegacao.forEach((link) => {
+        const estaAtivo = link.getAttribute("href") === `#${id}`;
+        link.classList.toggle("is-active", estaAtivo);
       });
     });
   },
@@ -70,26 +70,26 @@ const sectionObserver = new IntersectionObserver(
   }
 );
 
-sections.forEach((section) => {
-  sectionObserver.observe(section);
+secoes.forEach((secao) => {
+  observadorSecao.observe(secao);
 });
 
-if (portraitFrame && portraitImage) {
-  portraitImage.addEventListener("load", () => {
-    portraitFrame.classList.add("has-image");
+if (molduraRetrato && imagemRetrato) {
+  imagemRetrato.addEventListener("load", () => {
+    molduraRetrato.classList.add("has-image");
   });
 
-  portraitImage.addEventListener("error", () => {
-    portraitFrame.classList.remove("has-image");
+  imagemRetrato.addEventListener("error", () => {
+    molduraRetrato.classList.remove("has-image");
   });
 }
 
-const particleState = {
+const estadoParticulas = {
   particles: [],
   count: window.innerWidth < 768 ? 26 : 46,
 };
 
-function setCanvasSize() {
+function definirTamanhoCanvas() {
   if (!canvas) {
     return;
   }
@@ -98,7 +98,7 @@ function setCanvasSize() {
   canvas.height = window.innerHeight;
 }
 
-function createParticle() {
+function criarParticula() {
   return {
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
@@ -109,57 +109,57 @@ function createParticle() {
   };
 }
 
-function seedParticles() {
-  particleState.particles = Array.from({ length: particleState.count }, createParticle);
+function semearParticulas() {
+  estadoParticulas.particles = Array.from({ length: estadoParticulas.count }, criarParticula);
 }
 
-function drawParticles() {
-  if (!ctx || !canvas) {
+function desenharParticulas() {
+  if (!contexto || !canvas) {
     return;
   }
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  contexto.clearRect(0, 0, canvas.width, canvas.height);
 
-  particleState.particles.forEach((particle, index) => {
+  estadoParticulas.particles.forEach((particle, index) => {
     particle.x += particle.speedX;
     particle.y += particle.speedY;
 
     if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
     if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
 
-    ctx.beginPath();
-    ctx.fillStyle = `rgba(97, 218, 251, ${particle.alpha})`;
-    ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-    ctx.fill();
+    contexto.beginPath();
+    contexto.fillStyle = `rgba(97, 218, 251, ${particle.alpha})`;
+    contexto.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+    contexto.fill();
 
-    for (let next = index + 1; next < particleState.particles.length; next += 1) {
-      const other = particleState.particles[next];
+    for (let next = index + 1; next < estadoParticulas.particles.length; next += 1) {
+      const other = estadoParticulas.particles[next];
       const dx = particle.x - other.x;
       const dy = particle.y - other.y;
       const distance = Math.hypot(dx, dy);
 
       if (distance < 110) {
-        ctx.beginPath();
-        ctx.strokeStyle = `rgba(97, 218, 251, ${0.08 - distance / 1800})`;
-        ctx.lineWidth = 1;
-        ctx.moveTo(particle.x, particle.y);
-        ctx.lineTo(other.x, other.y);
-        ctx.stroke();
+        contexto.beginPath();
+        contexto.strokeStyle = `rgba(97, 218, 251, ${0.08 - distance / 1800})`;
+        contexto.lineWidth = 1;
+        contexto.moveTo(particle.x, particle.y);
+        contexto.lineTo(other.x, other.y);
+        contexto.stroke();
       }
     }
   });
 
-  window.requestAnimationFrame(drawParticles);
+  window.requestAnimationFrame(desenharParticulas);
 }
 
-if (canvas && ctx) {
-  setCanvasSize();
-  seedParticles();
-  drawParticles();
+if (canvas && contexto) {
+  definirTamanhoCanvas();
+  semearParticulas();
+  desenharParticulas();
 
   window.addEventListener("resize", () => {
-    particleState.count = window.innerWidth < 768 ? 26 : 46;
-    setCanvasSize();
-    seedParticles();
+    estadoParticulas.count = window.innerWidth < 768 ? 26 : 46;
+    definirTamanhoCanvas();
+    semearParticulas();
   });
 }
