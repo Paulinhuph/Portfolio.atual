@@ -51,4 +51,3 @@ Atualmente estudo:
 
 Meu foco é desenvolver pensamento computacional sólido e criar projetos que integrem software, dados e inteligência artificial.
 
-Contato
