@@ -51,3 +51,6 @@ Atualmente estudo:
 
 Meu foco é desenvolver pensamento computacional sólido e criar projetos que integrem software, dados e inteligência artificial.
 
+<img width="1920" height="1080" alt="Captura de Tela (17)" src="https://github.com/user-attachments/assets/22ab7a2c-06fa-4998-9f21-f4b24e2e405f" />
+
+
